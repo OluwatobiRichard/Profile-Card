@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- PROFILE CARD -->
+     <article data-testid="test-profile-card" class="card">
+        <!-- TOP SECTION -->
+         <div class="card-top">
+
+            <!-- AVATAR -->
+             <figure class="avatar-box">
+                <img src="images/oluwatobi.jpeg" alt="Profile photo of a frontend developer" data-testid="test-user-avatar">
+             </figure>
+
+             <!-- USER INFO -->
+              <div class="user-info">
+                <header>
+                    <h2 data-testid="test-user-name">Ojo Oluwatobi Richard</h2>
+                </header>
+                <p data-testid="test-user-bio">
+                     I am a frontend developer who enjoys creating clean, responsive, and accessible web applications. I love learning and building real-world projects.
+                </p>
+                <p class="time">
+                    Current Time (ms):
+                    <span data-testid="test-user-time" aria-live="polite"></span>
+                </p>
+
+                <!-- SOCIAL LINKS -->
+                 <nav data-testid="test-user-social-links" aria-label="User social links">
+                    <ul class="social-list">
+                        <li>
+                            <a href="https://x.com/oluwatobir24450" target="_blank" rel="noopener noreferrer"data-testid="test-user-social-twitter">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/ojo-oluwatobi-62264b321/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/OluwatobiRichard" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a>
+                        </li>
+                    </ul>
+                 </nav>
+              </div>
+         </div>
+         <!-- HOBBIES -->
+          <section data-testid="test-user-hobbies" class="list-box">
+            <h3>Hobbies</h3>
+            <ul>
+                <li>Coding</li>
+                <li>Reading</li>
+                <li>Watching Football</li>
+            </ul>
+          </section>
+
+           <!-- DISLIKES -->
+            <section data-testid="test-user-dislikes" class="list-box">
+                <h3>Dislikes</h3>
+                <ul>
+                    <li>Bad UX/UI</li>
+                    <li>Slow Websites</li>
+                    <li>Bad Players</li>
+                </ul>
+            </section>
+             <!-- LINK JS -->
+              <script src="script.js"></script>
+     </article>
+</body>
+</html>

@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color:#f2f2f5 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* CARD */
+.card {
+    background: #fff;
+    position: relative;
+    width: 90%;
+    max-width: 750px;
+    padding: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+/* TOP BORDER */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  animation: moveBorder 3s linear infinite;
+}
+/* BOTTOM BORDER */
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 200%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  animation: moveBorder 3s linear infinite;
+}
+/* ANIMATION */
+@keyframes moveBorder {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .card-top {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* AVATAR */
+.avatar-box img {
+    width: 160px;
+    height: 160px;
+    border-radius: 20%;
+    object-fit: fill;
+}
+.user-info {
+    flex: 1;
+}
+.user-info h2 {
+    margin-bottom: 10px;
+}
+.user-info p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* TIME */
+.time {
+    font-size: 0.9rem;
+    color: #555;
+}
+/* SOCIAL */
+.social-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+.social-list a {
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: 700;
+}
+/* FOCUS (ACCESSIBILITY) */
+.social-list a:focus {
+  outline: 2px solid black;
+}
+
+.list-box {
+  margin-top: 15px;
+}
+.list-box h3 {
+  margin-bottom: 6px;
+}
+.list-box ul {
+  padding-left: 20px;
+}
